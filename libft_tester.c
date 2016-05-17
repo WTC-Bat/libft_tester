@@ -460,6 +460,8 @@ int		main(int argc, char **argv)
 
 
 	/*
+	 *	Ouputs below are incomplete
+	 *
 	 *	Below are the outputs for the various functions. They would usually be accessed by using the 'o' option [./a.out o].
 	 *	However, if there is a critial error in one of the checks above, these outputs will never be reached.
 	 */
