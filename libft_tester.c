@@ -1,5 +1,5 @@
 /*
- *	NOTE: 
+ *	NOTE:
  *	Comparison functions (ft_strcmp, ft_memcmp, etc.) may FAIL depending on how the function was written.
  *	Comparison are checked by checking if the output is [>, < or == 0]. Additional testing for these
  *	functions may be required, as the signs may need to be reversed.
@@ -25,7 +25,7 @@ static int		as_int(char *s)
 {
 	int		cnt;
 	int		out_int;
-	
+
 	cnt = 0;
 	out_int = 0;
 	while (s[cnt])
@@ -47,6 +47,10 @@ static int		scmp(char const *s1, char const *s2)
 	}
 	return (*s1 - *s2);
 }
+
+/*
+**-----------------------------------
+*/
 
 int		main(int argc, char **argv)
 {
@@ -82,7 +86,7 @@ int		main(int argc, char **argv)
 		printf("ft_itoa:\t\tOK\n");
 	else
 		printf("ft_itoa:\t\tFAIL\n");
-			
+
 	/*ft_strcat*/
 	char	strcat1[] = "Mat";
 	char	*strcat2 = "thew";
@@ -92,7 +96,7 @@ int		main(int argc, char **argv)
 	else
 		printf("ft_strcat:\t\tFAIL\n");
 
-	/*ft_strchr*/	
+	/*ft_strchr*/
 	//printf("ft_strchr(\"abcdefg\", \'d\'):\t[\"defg\"]\n\t%s\n\n", ft_strchr("abcdefg", 'd'));
 	if (scmp(ft_strchr("abcdefg", 'd'), "defg") == 0)
 		printf("ft_strchr:\t\tOK\n");
@@ -145,7 +149,7 @@ int		main(int argc, char **argv)
 		printf("ft_strncpy:\t\tOK\n");
 	else
 		printf("ft_strncpy:\t\tFAIL\n");
-	
+
 	/*ft_strnew*/	//!!
 	if (!ft_strnew(6))
 		printf("ft_strnew:\t\tFAIL\n");
@@ -206,9 +210,9 @@ int		main(int argc, char **argv)
 	if (scmp(ft_strsub("!#*FatBatABBACAB", 3, 6), "FatBat") == 0)
 		printf("ft_strsub:\t\tOK\n");
 	else
-		printf("ft_strsub:\t\tFAIL\n");	
+		printf("ft_strsub:\t\tFAIL\n");
 
-	/*ft_strtrim*/	
+	/*ft_strtrim*/
 	if (scmp(ft_strtrim("  \t Fat B at  \t\n\n"), "Fat B at") == 0)
 		printf("ft_strtrim:\t\tOK\n");
 	else
@@ -241,7 +245,7 @@ int		main(int argc, char **argv)
 		printf("ft_isalnum:\t\tOK\n");
 	else
 		printf("ft_isalnum:\t\tFAIL\n");
-	
+
 	/*ft_isalpha*/
 	if (ft_isalpha('A') == 1 &&
 		ft_isalpha('Z')	== 1 &&
@@ -252,7 +256,7 @@ int		main(int argc, char **argv)
 		printf("ft_isalpha:\t\tOK\n");
 	else
 		printf("ft_isalpha:\t\tFAIL\n");
-	
+
 	/*ft_isascii*/
 	if (ft_isascii('!') == 1 &&
 		ft_isascii('A') == 1 &&
@@ -260,7 +264,7 @@ int		main(int argc, char **argv)
 		printf("ft_isascii:\t\tOK\n");
 	else
 		printf("ft_isascii:\t\tFAIL\n");
-	
+
 	/*ft_isdigit*/
 	if (ft_isdigit('0') == 1 &&
 		ft_isdigit('9') == 1 &&
@@ -269,7 +273,7 @@ int		main(int argc, char **argv)
 		printf("ft_isdigit:\t\tOK\n");
 	else
 		printf("ft_isdigit:\t\tFAIL\n");
-	
+
 	/*ft_isprint*/
 	if (ft_isprint('0') == 1 &&
 		ft_isprint('9') == 1 &&
@@ -294,7 +298,7 @@ int		main(int argc, char **argv)
 		printf("ft_strcmp:\t\tOK\n");
 	else
 		printf("ft_strcmp:\t\tFAIL\n");
-	
+
 	/*ft_strequ*/
 	if (ft_strequ("cheese", "cheese") == 1 &&
 		ft_strequ("cheese", "cheesy") == 0)
@@ -317,9 +321,9 @@ int		main(int argc, char **argv)
 		printf("ft_strnequ:\t\tOK\n");
 	else
 		printf("ft_strnequ:\t\tFAIL\n");
-	
+
 	/*ft_strlcat*/
-	
+
 
 	/*ft_strlen*/
 	if (ft_strlen("FatBat") == 6)
@@ -492,7 +496,7 @@ int		main(int argc, char **argv)
 	/*ft_strsub*/
 	printf("ft_stsub(\"!#*FatBatABBACAB\", 3, 6):\t[\"FatBat\"]\n\t%s\n\n", ft_strsub("!#*FatBatABBACAB", 3, 6));
 
-	/*ft_strtrim*/	
+	/*ft_strtrim*/
 	char	*trim = ft_strtrim("  \t Fat B at  \t\n\n");
 	printf("ft_strtrim(\"  \t Fat B at  \t\n\n\"):\t[\"Fat B at\"]\n\t%s\n", trim);
 	printf("Initial length:\t\t%i\n", slen("  \t Fat B at  \t\n\n"));
@@ -505,20 +509,20 @@ int		main(int argc, char **argv)
 	printf("ft_toupper(\'a\'):\t[\'A\']\n\t%c\n", ft_toupper('a'));
 
 	/*ft_strcat*/
-	printf("ft_strcat(\"Mat\", \"thew\"):\t[\"Matthew\"]\n\t%s\n\n", ft_strcat(strcat1, strcat2));	
+	printf("ft_strcat(\"Mat\", \"thew\"):\t[\"Matthew\"]\n\t%s\n\n", ft_strcat(strcat1, strcat2));
 
-	/*ft_strchr*/	
-	printf("ft_strchr(\"abcdefg\", \'d\'):\t[\"defg\"]\n\t%s\n\n", ft_strchr("abcdefg", 'd'));	
+	/*ft_strchr*/
+	printf("ft_strchr(\"abcdefg\", \'d\'):\t[\"defg\"]\n\t%s\n\n", ft_strchr("abcdefg", 'd'));
 
 	/*ft_strcmp*/
 	char	*strcmp1 = "cheese";
 	char	*strcmp2 = "cheesy";
 	char	*strcmp3 = "crackers";
 	printf("ft_strcmp(\"cheese\", \"cheesy\"):\n\t%i\n", ft_strcmp(strcmp1, strcmp2));
-	printf("ft_strcmp(\"cheese\", \"crackers\"):\n\t%i\n\n", ft_strcmp(strcmp1, strcmp3));	
+	printf("ft_strcmp(\"cheese\", \"crackers\"):\n\t%i\n\n", ft_strcmp(strcmp1, strcmp3));
 
 	/*ft_strcpy*/
-	printf("ft_strcpy(\"bat\", \"tab\"):\t[\"tab\"]\n\t%s\n\n", ft_strcpy(strcpy1, strcpy2));	
+	printf("ft_strcpy(\"bat\", \"tab\"):\t[\"tab\"]\n\t%s\n\n", ft_strcpy(strcpy1, strcpy2));
 
 	/*ft_strdup*/
 	printf("ft_strdup(\"cheese\"):\t[\"cheese\"]\n\t%s\n\n", ft_strdup("cheese"));
@@ -536,26 +540,26 @@ int		main(int argc, char **argv)
 	printf("ft_isalnum(\'A\'):\t[1]\n\t%i\n", ft_isalnum('A'));
 	printf("ft_isalnum(\'0\'):\t[1]\n\t%i\n", ft_isalnum('0'));
 	printf("ft_isalnum(\'!\'):\t[0]\n\t%i\n\n", ft_isalnum('!'));
-	
+
 	/*ft_isalpha*/
 	printf("ft_isalpha(\'A\'):\t[1]'n\t%i\n\n", ft_isalpha('A'));
 	printf("ft_isalpha(\'0\'):\t[0]'n\t%i\n\n", ft_isalpha('0'));
-	
+
 	/*ft_isascii*/
 
-	
+
 	/*ft_isdigit*/
 
-	
+
 	/*ft_isprint*/
 
-	
+
 	/*ft_strequ*/
 
-	
+
 	/*ft_strlen*/
 
-	
+
 	/*ft_strnequ*/
 
 
